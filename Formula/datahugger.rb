@@ -1,25 +1,25 @@
 class Datahugger < Formula
   desc "Tool for fetching data and metadata from DOI or URL."
-  homepage "https://github.com/EOSC-Data-Commons/datahugger-rs"
-  version "0.1.1"
+  homepage "https://github.com/EOSC-Data-Commons/datahugger-ng"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/EOSC-Data-Commons/datahugger-rs/releases/download/v0.1.1/datahugger-aarch64-apple-darwin.tar.xz"
-      sha256 "4e61f3c42fa27ee9ee850675996f893ffe6f968f603ef7a0ebb77db5a17adf4a"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-aarch64-apple-darwin.tar.xz"
+      sha256 "05124540bd40361d5fb9ffe7fbe3ea0aae5738eb16437cb9f3d2524b0d885c38"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EOSC-Data-Commons/datahugger-rs/releases/download/v0.1.1/datahugger-x86_64-apple-darwin.tar.xz"
-      sha256 "f03465b0f71c5674d48492c9ef866cb8036bda3ef76f9579ba744178b8339b66"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-x86_64-apple-darwin.tar.xz"
+      sha256 "3932893a91ed249ffb0bd508e952cd06e8ab018b68fecabb97593c72dbd4093f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/EOSC-Data-Commons/datahugger-rs/releases/download/v0.1.1/datahugger-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d1dc84dceb782f4a9c61c0ed21a7ec06fa5ffd48e590a668c66b632058086767"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f3cb5d5251d2b689c8b7fa62ab69f293fd769e537d758558bf2a97b8dae308be"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EOSC-Data-Commons/datahugger-rs/releases/download/v0.1.1/datahugger-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a4e3e095958b6e86cec6d9579a15085416c736cd33d486d87c69dc739da51712"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9533091d4070bfbb4feab1073bba3fcf45888b5204d7ff46c83862da615df4cd"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
