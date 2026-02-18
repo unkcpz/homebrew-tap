@@ -1,25 +1,25 @@
 class Datahugger < Formula
   desc "Tool for fetching data and metadata from DOI or URL."
   homepage "https://github.com/EOSC-Data-Commons/datahugger-ng"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-aarch64-apple-darwin.tar.xz"
-      sha256 "05124540bd40361d5fb9ffe7fbe3ea0aae5738eb16437cb9f3d2524b0d885c38"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.3.0/datahugger-aarch64-apple-darwin.tar.xz"
+      sha256 "e9207597452e36542ef1c32ec4ccac620789c83e06985cb822fd6ee9fced656d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-x86_64-apple-darwin.tar.xz"
-      sha256 "3932893a91ed249ffb0bd508e952cd06e8ab018b68fecabb97593c72dbd4093f"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.3.0/datahugger-x86_64-apple-darwin.tar.xz"
+      sha256 "cc8a78c513ed1a86fdb2465a6228d5fa8e4fa7be7952da82610fb5967e5cc50c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f3cb5d5251d2b689c8b7fa62ab69f293fd769e537d758558bf2a97b8dae308be"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.3.0/datahugger-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0f0117f7f8460b4e871b2cc58cbe1370390d6ee2d12f040d190a6d8c4c9e817b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.2.0/datahugger-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9533091d4070bfbb4feab1073bba3fcf45888b5204d7ff46c83862da615df4cd"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.3.0/datahugger-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "67dfc7551117dc11ebe37d4f8c0cc2ae17c53972c2d8adcbc52be1100e9a1870"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
