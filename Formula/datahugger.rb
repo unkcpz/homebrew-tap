@@ -1,25 +1,25 @@
 class Datahugger < Formula
   desc "Tool for fetching data and metadata from DOI or URL."
   homepage "https://github.com/EOSC-Data-Commons/datahugger-ng"
-  version "0.6.6"
+  version "0.6.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.6/datahugger-aarch64-apple-darwin.tar.xz"
-      sha256 "8941060146c8134d5ba779f9ecfb1dfab257e12db052bd549e4d7dca551f08ec"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.7/datahugger-aarch64-apple-darwin.tar.xz"
+      sha256 "175a07fc8e4a251244c9c29c0b5609e4fef9a082d381e5124120208147dd630f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.6/datahugger-x86_64-apple-darwin.tar.xz"
-      sha256 "299c9cce57fe630351f9414dd681cc53fe39b772ec15561899f037ffe9222472"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.7/datahugger-x86_64-apple-darwin.tar.xz"
+      sha256 "6e7b66b05ea4b6c38043ec08cadd551792ce72d877e63c60c1d6d4e785b332c4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.6/datahugger-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "02073cf013307799088928e4d964ff0c154a7c1a120176ce1a686d1bd8c48d33"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.7/datahugger-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4cc4c8ba202da22f43b9bbfc43efd6360904df58c82bc5ae68fce861f32de6f6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.6/datahugger-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "eb2aeb486a8ebc8309e9b27ca4728ba47351b52544314c308f9cba3a0511fbdd"
+      url "https://github.com/EOSC-Data-Commons/datahugger-ng/releases/download/v0.6.7/datahugger-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e9a875cb7601ddd39968aa59060b58465c4143c3db97f9236f90f2c1d7f85517"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,10 +48,18 @@ class Datahugger < Formula
   end
 
   def install
-    bin.install "datahugger" if OS.mac? && Hardware::CPU.arm?
-    bin.install "datahugger" if OS.mac? && Hardware::CPU.intel?
-    bin.install "datahugger" if OS.linux? && Hardware::CPU.arm?
-    bin.install "datahugger" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "datahugger"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "datahugger"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "datahugger"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "datahugger"
+    end
 
     install_binary_aliases!
 
